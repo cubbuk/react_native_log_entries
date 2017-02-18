@@ -51,7 +51,7 @@ compile project(':react_native_log_entries')
 <uses-permission android:name="android.permission.INTERNET" />
 ````
 
-6. Lastly add this maven repo maven { url 'https://jitpack.io' } to application level build.gradle file like following. this repo is already included to library project but it is still required to run the project without any problem, if anyone knows how to avoid it please raise a PR
+6. Lastly add this maven repo `maven { url 'https://jitpack.io' }` to application level build.gradle file like following. this repo is already included to library project but it is still required to run the project without any problem, if anyone knows how to avoid it please raise a PR
 
 ````
 allprojects {
