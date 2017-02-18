@@ -3,16 +3,19 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React, {Component} from "react";
+import {AppRegistry, StyleSheet, Text, View, NativeModules} from "react-native";
+import reactNativeLogEntriesLogger from "react_native_log_entries";
 
 export default class Example extends Component {
+
+  constructor(props, context, ...args) {
+    super(props, context, ...args);
+    const LOG_ENTRIES_SAMPLE_TOKEN = "aa76c166-4dc3-40f1-8de5-60473c31adfe"; // Please change this token with your log entries token
+    reactNativeLogEntriesLogger.initializeLogger(LOG_ENTRIES_SAMPLE_TOKEN);
+    reactNativeLogEntriesLogger.log("sample log message");
+  }
+
   render() {
     return (
       <View style={styles.container}>

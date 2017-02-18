@@ -24,14 +24,16 @@ public class ReactNativeLogEntriesModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void putToContext(String key, Object value) {
+    public void putToContext(String key, ReadableMap value) {
         this.context.put(key, value);
     }
 
     @ReactMethod
     public void initializeLogger(String token) {
         try {
-            logger = AndroidLogger.createInstance(getReactApplicationContext(), false, true, false, null, 0, token, true);
+            if(logger == null) {
+                logger = AndroidLogger.createInstance(getReactApplicationContext(), false, true, false, null, 0, token, true);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

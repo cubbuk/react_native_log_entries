@@ -8,7 +8,8 @@
 	},
 	"dependencies": {
 		"react": "15.4.2",
-		"react-native": "0.41.2"
+		"react-native": "0.41.2",
+		"react_native_log_entries": "file:../"
 	},
 	"devDependencies": {
 		"babel-jest": "18.0.0",
