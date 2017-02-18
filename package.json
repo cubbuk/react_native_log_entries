@@ -1,6 +1,6 @@
 {
   "name": "react_native_log_entries",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Android library for LogEntries",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/cubbuk/react_native_log_entries/issues"
   },
-  "homepage": "https://github.com/cubbuk/react_native_log_entries#readme"
+  "homepage": "https://github.com/cubbuk/react_native_log_entries#readme",
+  "keywords": [
+    "react-native",
+    "react",
+    "logentries",
+    "native",
+    "log"
+  ]
 }
