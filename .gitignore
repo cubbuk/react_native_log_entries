@@ -1,6 +1,9 @@
 .idea*
-react_native_log_entries.iml
 android/local.properties
-android/build/*
+android/build/
 *.iml
 android/.gradle
+Example/node_modules
+Example/android/.gradle
+Example/android/build
+Example/android/app/build
