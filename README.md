@@ -3,11 +3,14 @@
 An Android bridge for React Native to use [Log Entries](https://logentries.com/)
 
 ## Installation
+
+````
 npm install --save react_native_log_entries
+````
 
 ## Configuration
 
-Open up `android/app/src/main/java/[...]/MainApplication.java
+Open up `android/app/src/main/java/[...]/MainApplication.java`
 
 1. Add import com.cubbuk.reactnativelogentries.ReactNativeLogEntriesPackage; to the imports at the top of the file
 
