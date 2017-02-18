@@ -1,0 +1,19 @@
+{
+  "name": "react_native_log_entries",
+  "version": "1.0.0",
+  "description": "Android library for LogEntries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cubbuk/react_native_log_entries.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cubbuk/react_native_log_entries/issues"
+  },
+  "homepage": "https://github.com/cubbuk/react_native_log_entries#readme"
+}
