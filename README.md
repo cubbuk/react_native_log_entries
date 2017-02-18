@@ -90,3 +90,38 @@ export default class Example extends Component {
   ...
 ````
 
+1. Initialize logger with your token
+````
+const LOG_ENTRIES_SAMPLE_TOKEN = "aa76c166-4dc3-40f1-8de5-60473c31adfe"; // Please change this token with your log entries token, it might be unavailable by now
+reactNativeLogEntriesLogger.initializeLogger(LOG_ENTRIES_SAMPLE_TOKEN);
+````
+
+2. String messages can be logged
+````
+reactNativeLogEntriesLogger.log("sample log message 2");
+````
+
+3. For logging objects use `logJSON`
+````
+reactNativeLogEntriesLogger.logJSON({field1: "field1", field2: "field2"});
+````
+
+4. For adding context info such as logged in user into each message, `putToContext` method can be used.
+````    
+reactNativeLogEntriesLogger.putToContext("user", {name: "sampleUser", email: "sampleUser@email.com"});
+reactNativeLogEntriesLogger.log("sample log message with context by setting second parameter to true", true);
+//when context is used message will be part of `message` field on the logs
+````
+  
+5. use `removeFromContext` method for removing info from context map
+````
+reactNativeLogEntriesLogger.removeFromContext("user");
+reactNativeLogEntriesLogger.log("user will not be used as it is removed from context", true);
+````
+
+##Credits
+
+This library just tries to wrap [Android library of Logentries](https://docs.logentries.com/docs/android) to enable it to be used from a React Native Project and created solely for learning and experimentation, it can be used or shared by anyone without getting any consent of the author:
+Project folder structure and documentation is inspired from the famous [react-native-camera](https://github.com/lwansbrough/react-native-camera) repository
+  
+  
