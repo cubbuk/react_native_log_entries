@@ -7,6 +7,10 @@ class Logger {
     ReactNativeLogEntries.initializeLogger(token);
   }
 
+  removeFromContext(key) {
+    ReactNativeLogEntries.removeFromContext(key);
+  }
+
   putToContext(key, value) {
     ReactNativeLogEntries.putToContext(key, value);
   }
@@ -16,7 +20,7 @@ class Logger {
   }
 
   logJSON(jsonObject, enrichWithContext) {
-    ReactNativeLogEntries.log(jsonObject, !!enrichWithContext);
+    ReactNativeLogEntries.logJSON(jsonObject, !!enrichWithContext);
   }
 }
 

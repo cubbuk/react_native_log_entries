@@ -29,6 +29,11 @@ public class ReactNativeLogEntriesModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void removeFromContext(String key) {
+        this.context.remove(key);
+    }
+
+    @ReactMethod
     public void initializeLogger(String token) {
         try {
             if(logger == null) {
@@ -40,9 +45,8 @@ public class ReactNativeLogEntriesModule extends ReactContextBaseJavaModule {
     }
 
     public String enrichLogMessage(String message) {
-        Map<String, String> contextInfo = new HashMap<String, String>();
-        contextInfo.put("message", message);
-        return contextInfo.toString();
+        this.context.put("message", message);
+        return this.context.toString();
     }
 
     @ReactMethod

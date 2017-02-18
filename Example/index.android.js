@@ -11,9 +11,23 @@ export default class Example extends Component {
 
   constructor(props, context, ...args) {
     super(props, context, ...args);
-    const LOG_ENTRIES_SAMPLE_TOKEN = "aa76c166-4dc3-40f1-8de5-60473c31adfe"; // Please change this token with your log entries token
+    const LOG_ENTRIES_SAMPLE_TOKEN = "aa76c166-4dc3-40f1-8de5-60473c31adfe"; // Please change this token with your log entries token, it might be unavailable by now
     reactNativeLogEntriesLogger.initializeLogger(LOG_ENTRIES_SAMPLE_TOKEN);
-    reactNativeLogEntriesLogger.log("sample log message");
+
+    //string messages can be logged
+    reactNativeLogEntriesLogger.log("sample log message 2");
+
+    //JSON logging is available too
+    reactNativeLogEntriesLogger.logJSON({field1: "field1", field2: "field2"});
+
+    //for adding context info such as logged in user into each message, putToContext method can be used.
+    reactNativeLogEntriesLogger.putToContext("user", {name: "sampleUser", email: "sampleUser@email.com"});
+    reactNativeLogEntriesLogger.log("sample log message with context by setting second parameter to true", true);
+    //when context is used message will be part of `message` field on the logs
+
+    //then you can remove smtg from context
+    reactNativeLogEntriesLogger.removeFromContext("user");
+    reactNativeLogEntriesLogger.log("user will not be used as it is removed from context", true);
   }
 
   render() {
