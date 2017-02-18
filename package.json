@@ -1,6 +1,6 @@
 {
   "name": "react_native_log_entries",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Android library for LogEntries",
   "main": "index.js",
   "scripts": {
